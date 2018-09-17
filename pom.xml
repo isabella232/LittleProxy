@@ -1,6 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.littleshoot</groupId>
+    <groupId>org.gradle.org.littleshoot</groupId>
     <artifactId>littleproxy</artifactId>
     <packaging>jar</packaging>
     <version>1.1.3-SNAPSHOT</version>
@@ -47,21 +47,21 @@
     </issueManagement>
 
     <scm>
-        <connection>scm:git:https://adamfisk@github.com/adamfisk/LittleProxy.git</connection>
-        <developerConnection>scm:git:git@github.com:adamfisk/LittleProxy</developerConnection>
-        <url>scm:git:git@github.com:adamfisk/LittleProxy.git</url>
+        <connection>scm:git:git@github.com:gradle/LittleProxy.git</connection>
+        <developerConnection>scm:git:git@github.com:gradle/LittleProxy.git</developerConnection>
+        <url>https://github.com/gradle/LittleProxy</url>
         <tag>HEAD</tag>
     </scm>
 
     <distributionManagement>
         <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <id>gradle-ext-snapshots-local</id>
+            <url>https://repo.gradle.org/gradle/ext-snapshots-local</url>
         </snapshotRepository>
 
         <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>gradle-ext-releases-local</id>
+            <url>https://repo.gradle.org/gradle/ext-releases-local</url>
         </repository>
     </distributionManagement>
 
@@ -147,17 +147,6 @@
                                 </goals>
                             </execution>
                         </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.sonatype.plugins</groupId>
-                        <artifactId>nexus-staging-maven-plugin</artifactId>
-                        <version>1.6.7</version>
-                        <extensions>true</extensions>
-                        <configuration>
-                            <serverId>ossrh</serverId>
-                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                            <autoReleaseAfterClose>false</autoReleaseAfterClose>
-                        </configuration>
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
